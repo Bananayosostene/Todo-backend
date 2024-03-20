@@ -7,12 +7,12 @@ import { creatingtodo } from "../controllers/creating";
 import { verifyingtoken } from "../utils/token";
 
 const todoRouter: Router = express.Router();
+todoRouter.post("/post", creatingtodo);
+todoRouter.patch("/update/:updateId", updatethetask);
+todoRouter.get("/gets", findAll);
+todoRouter.get("/get/:findId", findtaskById);
+todoRouter.delete("/delete/:deleteId", deleteById);
 todoRouter.use(verifyingtoken);
-todoRouter.post("/createtodo", creatingtodo);
-todoRouter.patch("/updatetodo/:updateId", updatethetask);
-todoRouter.get("/findalltodo", findAll);
-todoRouter.get("/findtodoid/:findId", findtaskById);
-todoRouter.delete("/deletetodoid/:deleteId", deleteById);
 
 export default todoRouter;
 

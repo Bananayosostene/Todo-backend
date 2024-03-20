@@ -7,10 +7,10 @@ import { verifyingtoken } from "../utils/token";
 
 const userRouter: Router = express.Router();
 
-userRouter.post("/createuser", createUser);
+userRouter.post("/post", createUser);
 userRouter.post("/login", login);
-// userRouter.use(verifyingtoken);
-userRouter.get("/findalluser", verifyingtoken,findAllUsers);
-userRouter.delete("/deleteuserbyid/:userId",verifyingtoken, deleteUserById);
+userRouter.use(verifyingtoken);
+userRouter.get("/gets",findAllUsers);
+userRouter.delete("/delete/:userId",deleteUserById);
 
 export default userRouter;

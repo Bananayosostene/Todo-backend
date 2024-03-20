@@ -16,7 +16,7 @@ app.use(
 )
 
 app.use(bodyParser.json());
-app.use("/todoapi", mainrouter);
+app.use("/todo", mainrouter);
 
 
 const db: string = process.env.dbConnection as string;
