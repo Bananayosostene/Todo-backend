@@ -2,10 +2,7 @@ import supertest from "supertest";
 import app from "../index";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-// import { MongoMemoryServer } from "mongodb-memory-server";
 
-// let mongoServer: MongoMemoryServer;
-// let testTodoId: string;
 
 
 dotenv.config();
