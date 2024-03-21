@@ -17,7 +17,7 @@ export const generatingToken = (payload: any): string => {
   return token;
 };
 
-export const verifyingtoken = async (
+export const verifyingToken = async (
   req: AuthenticatedRequest,
   res: Response,
   next: NextFunction
