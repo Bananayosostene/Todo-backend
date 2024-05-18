@@ -9,10 +9,10 @@ import { verifyingToken } from "../utils/token";
 const todoRouter: Router = express.Router();
 todoRouter.get("/get/:findId", findtaskById);
 todoRouter.get("/gets", findAll);
-todoRouter.use(verifyingToken);
 todoRouter.post("/post", creatingtodo);
 todoRouter.patch("/update/:updateId", updatethetask);
 todoRouter.delete("/delete/:deleteId", deleteById);
+todoRouter.use(verifyingToken);
 
 export default todoRouter;
 
